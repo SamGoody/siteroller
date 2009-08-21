@@ -1,0 +1,72 @@
+/*  position to top/bottom of page, the hide/show class  */
+div.rteFloattrue{ position:absolute; }
+div.rteFloatfalse{ position:relative;}
+div.MooRTE{ left:0; width:100%; }
+div.MooRTE.rtePageBottom{ position:fixed; bottom:0}
+div.MooRTE.rtePageTop{ position:fixed; top:0;  }
+.rteHide{ display:none; }
+.rteTextArea{ border:1px solid #666 }
+.rteTopDown{top:0;}
+
+/* the Word03 skin, for better or worse :)  */
+div.MooRTE div.Word03 { left:0; bottom:0; width:100%; background-color:#B9D2F8; color:#222; font: 12px Arial; }
+div.MooRTE div.Word03    span{ height:20px; margin:1px; display:inline-block; }
+div.MooRTE div.Word03    input{ height:20px; width:100px; }
+div.MooRTE div.Word03    div.rteToolbar{ position:relative; width:100%; background-image:url(images/bg.gif) }
+div.MooRTE div.Word03    div.rteToolbar a{ height:20px; width:20px; margin:1px; display:inline-block; text-decoration:none; vertical-align:top; background-image:url(images/i3.gif)}
+div.MooRTE div.Word03    div.rteToolbar a:hover{ border:1px solid black; margin:0; background-color:#FFB874 }
+div.MooRTE div.Word03    .rteSelected{background-color:white}
+div.MooRTE div.Word03    div.rteMenu a{margin:2px; display:inline-block; text-decoration:none; vertical-align:top; }
+div.MooRTE div.Word03    div.rteMenu a.rteText{font: 12px black Arial; color:black; }
+div.MooRTE div.Word03    span.rtestart{background-image:url(images/start.gif); height:25px; width:7px; margin:0}
+div.MooRTE div.Word03    a.rteText{background-image:url(); min-width:38px; text-align:center; }
+div.MooRTE div.Word03    a.rteText:hover{ margin:1px; border:1px solid black; background-color:#FFB874;}
+div.MooRTE div.Word03    div.rteFlyout{position:absolute; border:0; top:20px; left:-1px; width:22px; background-color:#ddd}
+div.MooRTE div.Word03    a.Flyout{ position:relative; overflow:hidden;}
+div.MooRTE div.Word03    a.Flyout:hover{overflow:visible;}
+div.MooRTE div.Word03   .displayHtml{position:absolute; border:1px solid grey; left:0; top:0 }
+
+/* the rteGrey skin  */
+div.MooRTE div.rteGrey { left:0; bottom:0; width:100%; background:#BCBECD url('images/background_silver.jpg') repeat-x; color:#222; font: 12px Arial; }
+div.MooRTE div.rteGrey           span{ height:20px; margin:1px; display:inline-block; }
+div.MooRTE div.rteGrey           input{ height:20px; width:100px; }
+div.MooRTE div.rteGrey           div.rteTop{ border-bottom:1px #bbb solid; height:18px; overflow:hidden; vertical-align:bottom; text-align:left; }
+div.MooRTE div.rteGrey           .saveBtn{ background-image:url('images/Save.png'); position:absolute; top:1px; right:15px; width:75px;}
+div.MooRTE div.rteGrey           div.rteToolbar{ position:relative; width:100%; }
+div.MooRTE div.rteGrey           div.rteToolbar a{ height:20px; width:20px; margin:2px; display:inline-block; text-decoration:none; vertical-align:bottom; background-image:url(images/i3.gif)}
+div.MooRTE div.rteGrey           div.rteToolbar a:hover{ border:2px solid black; margin:0; }
+div.MooRTE div.rteGrey           .rteSelected{ background-color:white }
+div.MooRTE div.rteGrey           a.rteText{ height:16px; min-width:38px; margin:2px; display:inline-block; text-align:center; text-decoration:none; border:1px solid grey; -moz-corner-radius:2px }
+div.MooRTE div.rteGrey           a.rteText:hover{ margin:2px; background-color:#eee}
+div.MooRTE div.rteGrey           div.rteFlyout{ position:absolute; border:0; top:20px; left:-2px; width:24px; background-color:#ddd }
+div.MooRTE div.rteGrey           a.Flyout{ position:relative; overflow:hidden;}
+div.MooRTE div.rteGrey           a.Flyout:hover{ overflow:visible }
+div.MooRTE div.rteGrey          .displayHtml{position:absolute; border:1px solid grey; left:0; top:0 }
+
+/* Plugins */
+.rtefuUpload, .rtefuClear { cursor:pointer }
+.popup .popMid .popContent>span{ display:inline-block; width:90px; }
+.popup .popMid .popContent>input{ width:134px; margin:2px 0; }
+.popup .popMid .popContent div.radio input{ width:4px; }
+.popup .popMid .popContent div.radio { text-align:right; }
+.popup .popMid .popContent div.btns{ text-align:center; padding-top:12px; }
+.popup .popMid .popContent>#rem{ font:10px tahoma; text-align:right; }
+.popup .popMid .popContent>#rem>input{ vertical-align:middle; height:10px; }
+/* Old */
+xdiv.RTE div.rteR0{ border-bottom:1px #bbb solid; }
+xa:hover{ border:2px solid red; margin:0; }
+xa{ height:16px; width:16px; margin:2px; display:inline-block; text-decoration:none; vertical-align:bottom; background-image:url(images/i.gif)}
+
+/* list table */
+#siteContainer {position:relative; top:0px; left:0px; width:360px; margin:0 auto; padding:0; border:2px solid #111;}
+#mooRTEForm {margin:0; padding:0;}
+#formHeader {margin:0; padding:10px; padding-left:5px; color:#FFFFFF; font:bold 15px Arial; border-bottom:2px solid #111; background:#909090;}
+p.even {margin:0; padding:10px; padding-left:5px; background:#FFF;}
+p.even:hover {margin:0; padding:10px; padding-left:5px; background:#D5FCDD;}
+p.odd {margin:0; padding:10px; padding-left:5px; background:#EEE;}
+p.odd:hover {margin:0; padding:10px; padding-left:5px; background:#D5FCDD;}
+
+.nobg {margin:0; padding:10px; padding-left:5px; background:#FFF;}
+.bg {margin:0; padding:10px; padding-left:5px; background:#DEE7F8 !important;}
+
+#chkbx {cursor:pointer;}

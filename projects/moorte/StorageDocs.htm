@@ -1,0 +1,115 @@
+<!doctype>
+<html>
+
+<head>
+	<title>Mootools Rich Text Editor - MooRTE Docs</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="author" content="SamGoody, Siteroller">
+	<meta name="copyright" content="copyright 2009 www.siteroller.net">
+	<meta name="description" content="MooRTE, a super lightweight and complete Rich Text Editor">
+	<meta name="keywords" content="mootools,MooRTE,javascript,TinyMCE,javascript RTE framework,RTE,MooInline">
+	<meta name="robots" content="all">
+	
+	<link href="l2.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/moo.122.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="js/syntaxhighlighter/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="js/syntaxhighlighter/styles/shThemeDefault.css" />
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body>
+	<div id="stage">
+		<div id="header">
+			<div id="TRcorner"></div>
+			<div id="headMenu">
+				<div id="logo"><strong>Siteroller:</strong> Websites made <em>really</em> easy!!</div>
+				<img src="images/MenuTab.gif" id="menuBG" />
+				<a href="index.html">Home Page</a>       
+				<a class="selected" href="#">Projects</a>      
+				<a href="index-3.html">Library</a>     
+				<a href="index-4.html">Services</a>     
+				<a href="index-5.html">FAQs</a>    
+				<a href="index-6.html">Contact</a>
+			</div>
+			<hr/>
+			<img src="images/bg_header.jpg" style="margin-left:8px"/>
+			<hr class="headDivider" />
+		</div>
+		
+		<div id="body">
+			
+			<div id="CmdMenu">
+				<h4>MooRTE</h4>
+				<a href="MoorteDocs.htm">MooRTE</a>
+				<a href="UtilitiesDocs.htm">MooRTE.Utilities</a>
+				<a href="ElementsDocs.htm">MooRTE.Elements</a>
+				<a>MooRTE Storage</a>
+			</div>
+			
+			<div id="main">
+				<h1>Element Storage: Properties</h1>
+				<p>Several values are stored on the element and Rich Text Editor using the excellent Mootools Element storage hash.
+					These are designed for internal use, but are globally accessible.</p>
+				
+				<h2>Stored Property: RTE</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myElement.retrieve('RTE'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(object) - reference to whichever RTE is associated with the element. </li></ul>				
+				
+				<h2>Stored Property: removed</h2>
+				<p>	Flag used internally by the moorte('remove') method to track when an RTE is removed.</p>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myElement.retrieve('removed'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(Boolean) 'True' if element has been removed.</li></ul>		
+					
+				<h1>Element Storage: RTE Properties</h1>
+
+				<h2>Stored Property: fields</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myRTE.retrieve('fields'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(array) - A reference to all fields that are associated with this RTE. </li></ul>
+		
+				<h2>Stored Property: shortcuts</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myRTE.retrieve('shortcuts'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(object) - list of key:function's.  When 'ctrl' + key is pressed, function is carried out. </li></ul>	
+				
+				<h2>Stored Property: update</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myRTE.retrieve('update'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(object) - storage for all reference to the RTE that is associated with the element. </li></ul>		
+				
+				<h2>Stored Property: ranges</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myRTE.retrieve('ranges'); </pre>
+				<h3>Returns</h2>
+				<ul><li>(object) - name:range references to all ranges that are stored for each RTE. </li></ul>		
+			</div>
+			
+			<div id="CmdMenuDetail">
+				<strong>Element Storage</strong>
+				<a>RTE</a>
+				<a>removed</a>
+				<strong>RTE Storage</strong>
+				<a>fields</a>
+				<a>shortcuts</a>
+				<a>update</a>
+				<a>ranges</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- oranges,grapefruit,lemons -->

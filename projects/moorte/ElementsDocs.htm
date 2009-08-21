@@ -1,0 +1,153 @@
+<!doctype>
+<html>
+
+<head>
+	<title>Mootools Rich Text Editor - MooRTE Docs</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="author" content="SamGoody, Siteroller">
+	<meta name="copyright" content="copyright 2009 www.siteroller.net">
+	<meta name="description" content="MooRTE, a super lightweight and complete Rich Text Editor">
+	<meta name="keywords" content="mootools,MooRTE,javascript,TinyMCE,javascript RTE framework,RTE,MooInline">
+	<meta name="robots" content="all">
+	
+	<link href="l2.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/moo.122.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="js/syntaxhighlighter/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="js/syntaxhighlighter/styles/shThemeDefault.css" />
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/syntaxhighlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+</head>
+<body>
+	<div id="stage">
+		<div id="header">
+			<div id="TRcorner"></div>
+			<div id="headMenu">
+				<div id="logo"><strong>Siteroller:</strong> Websites made <em>really</em> easy!!</div>
+				<img src="images/MenuTab.gif" id="menuBG" />
+				<a href="index.html">Home Page</a>       
+				<a class="selected" href="#">Projects</a>      
+				<a href="index-3.html">Library</a>     
+				<a href="index-4.html">Services</a>     
+				<a href="index-5.html">FAQs</a>    
+				<a href="index-6.html">Contact</a>
+			</div>
+			<hr/>
+			<img src="images/bg_header.jpg" style="margin-left:8px"/>
+			<hr class="headDivider" />
+		</div>
+		
+		<div id="body">
+			
+			<div id="CmdMenu">
+				<h4>MooRTE</h4>
+				<a href="MoorteDocs.htm">MooRTE</a>
+				<a href="UtilitiesDocs.htm">MooRTE.Utilities</a>
+				<a>MooRTE.Elements</a>
+				<a href="StorageDocs.htm">MooRTE Storage</a>
+			</div>
+			
+			<div id="main">
+				<h1>MooRTE Hash: Elements</h1>
+				<p>Hash used to store all buttons and elements that are available for use by the Rich Text Editor.</p>
+				
+				<h3>Syntax</h3>
+				<pre class="brush:js"> var ME = MooRTE.Elements;</pre>
+				
+				<h2>MooRTE.Elements Method: extend</h2>
+				<pre class="brush:js"> MooRTE.Elements.extend(object);</pre>
+				<h3>Returns</h3>
+				<ul><li>(hash) - The instance of MooRTE.Element</li></ul>
+				<h3>Arguments</h3>
+				<p>(object) - An object whose properties will be converted to an element of the RTE.  All properties are optional.</p>
+				<ul>
+					<li>
+						The key is prepended with "rte" and added to the element as a class
+						<pre class="brush:js"> 
+							MyBtn:{}  
+							//becomes
+							<a class="rteMyBtn"></a> 
+						</pre>
+					</li>
+					<li>All properties that do not have special meaning will become properties of the element that is created.
+						<pre class="brush:js"> 
+							myBtn:{widget:'engaged'}
+							//becomes
+							<a widget="engaged" class="rteMyBtn"></a>	
+						</pre>
+					</li>
+					<li>The properties with special meaning are:
+						<ul>
+							<li>element: [string, usually defaults to 'a'] - the type of element to be created. If 'type' is an input (eg. type:'password'), defaults to 'input' instead. </li>
+							<li>shortcut: [string] - keyboard character that when pressed together with the 'Ctrl' key will run the onClick method.</li>
+							<li>img: [string] - url to the background image (if a number, sets the background-position & image must be defined in CSS).</li>
+							<li>contains: [JSON object, array, or string] - other elements (keys) that should be included into this element. run between 'onLoad' and 'onShow'.</li>
+							<li>onLoad: [function, see options below] - function to run when button is loaded onto screen.</li>
+							<li>onClick: [see options below]  - function to run when button is clicked.</li>
+							<li>onUpdate: [see options below] - function to run when on every keystroke or mouseclick within the fields the button affects.
+							<li>args: [mixed, DEPRECATED] - arguments to be passed into the function, or a function to be run to receive the arguments.  [Passed into all onEvent methods when they contain a function reference.]</li>				
+						</ul>
+					</li>
+					<li> In addition, the following are defined in the add function, and only run when hiding or showing/creating a new group.
+						<ul>
+							<li>onHide - function to run when group is hidden</li>
+							<li>onShow - function to run when group is created or shown</li>
+							<li>hides - Deprecated - array of other elements to hide when this is shown</li>
+						</ul>
+					</li>
+				</ul>
+
+				<h3>Option: OnEvent (Load,Click,Show,Hide)</h3>
+				<ul>
+					<li>Within the function, 'this' refers to the button being pressed.</li>
+					<li>
+						If argument is the string 'on[Event]', it references the pointed to event.  In this example, 'alive!' will be alerted when the button loads & when clicked.
+						<pre class="brush:js">
+							MyBtn:{ 
+								onLoad:function(){alert('alive!')}, 
+								onClick:'onLoad' 
+							}
+						</pre>
+					</li>
+					<li>
+						If argument is a string, MooRTE will assume it to be a Utilities method call.<br/>  The following are identical:
+						<pre class="brush:js"> 
+							onClick:'exec(indent)'
+							onClick:function(){ MooRTE.Utilities.exec('indent'); } 
+						</pre>
+					</li>
+					<li>
+						If argument is an array or object, it is passed to MooRTE.Utilities.add.<br/> The following are identical:
+						<pre class="brush:js"> 
+							onClick: ['bold','italic']
+							onClick: 'add([bold,italic])'
+							onClick: function(){ MooRTE.Utilities.add('bold, italic'); } 
+						</pre>
+					</li>
+				</ul>
+				
+				<h3>Examples</h3>
+				<pre class="brush:js"> 
+					MyEl:{ element:'myEl', 
+						onClick:function(){ alert(this.get('tag'))}  }
+					// creates: <myEl class="rteMyEl"></myEl>
+					// when clicked, will alert "myEL"!
+				</pre>
+			</div>
+			
+			<div id="CmdMenuDetail">
+				<strong>MooRTE.Elements</strong>
+				<strong>MooRTE.Elements.extend</strong>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- oranges,grapefruit,lemons -->

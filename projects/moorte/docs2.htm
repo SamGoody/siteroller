@@ -1,0 +1,231 @@
+<!doctype>
+<html>
+
+<head>
+	<title>Mootools Rich Text Editor - MooRTE Docs</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="author" content="SamGoody, Siteroller">
+	<meta name="copyright" content="copyright 2009 www.siteroller.net">
+	<meta name="description" content="MooRTE, a super lightweight and complete Rich Text Editor">
+	<meta name="keywords" content="mootools,MooRTE,javascript,TinyMCE,javascript RTE framework,RTE,MooInline">
+	<meta name="robots" content="all">
+	
+	<script type="text/javascript" src="js/moo.122.js"></script>
+	<link href="l2.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="js/source/Flame.js"></script>
+	<script type="text/javascript" src="js/source/Fuel.js"></script>
+	<script type="text/javascript" src="js/source/Fuel.js.js"></script>
+	<script type="text/javascript" src="js/source/Lighter.js"></script> 
+	<script type="text/javascript">
+		window.addEvent('domready', function(){
+			$$('pre').light({altLines: 'hover'});
+		})
+	</script>
+
+	
+	<!-- 
+		<script>
+			window.addEvent('domready',function(){
+				$('jsCode').highlight();
+			})
+			Element.implement({
+				highlight: function(search, insensitive, klass){
+					console.log('rol')
+					var regex = new RegExp('(<[^>]*>)|(\\b'+ search.escapeRegExp() +')', insensitive ? 'ig' : 'g');
+					return this.set('html', this.get('html').replace(regex, function(a, b, c){
+						return (a.charAt(0) == '<') ? a : '<strong class="'+ klass +'">' + c + '</strong>'; 
+					}));
+				}
+			});
+		</script>
+	 -->
+	
+</head>
+<body>
+	<div id="stage">
+		<div id="header">
+			<div id="TRcorner"></div>
+			<div id="headMenu">
+				<div id="logo">Siteroller</div>
+				<img src="images/MenuTab.gif" id="menuBG" />
+				<a href="index.html">Home Page</a>       
+				<a class="selected" href="#">Projects</a>      
+				<a href="index-3.html">Library</a>     
+				<a href="index-4.html">Services</a>     
+				<a href="index-5.html">FAQs</a>    
+				<a href="index-6.html">Contact</a>
+			</div>
+			<hr/>
+			<img src="images/bg_header.jpg" style="margin-left:8px"/>
+			<hr class="headDivider" />
+		</div>
+		
+		<div id="body">
+			
+			<div id="CmdMenu">
+				<h4>MooRTE</h4>
+				<a href="MoorteDocs.htm">MooRTE</a>
+				<a href="UtilitiesDocs.htm">MooRTE.Utilities</a>
+				<a href="ElementsDocs.htm">MooRTE.Elements</a>
+				<a href="StorageDocs.htm">MooRTE Storage</a>
+			</div>
+			
+			<div id="main">
+				<h1>Class: MooRTE</h1>
+				
+				<p>This class will make any number of elements editable, and add a 'Rich Text Editing' toolbar with which to edit those elements.</p>
+
+				<h3>Tutorial/Demo</h3>
+				<ul><li><a>Online Tutorial/Demo</a></li></ul>
+
+				<h3>Implements</h3>
+				<ul><li>Options</li></ul>
+
+				<h3>Syntax</h3>
+				<pre id="jsCode" class="brush:js"> new MooRTE(options); </pre>
+			
+				<h3>Options</h3>
+				<ul>
+					<li>floating - (boolean: defaults to false) whether the Rich Text Editor (RTE) should be inserted into the DOM, or should float above it.</li>
+					<li>elements - (CSS selectors: defaults to 'textarea .rte') The elements that should be made editable.</li>
+					<li>location - (string: defaults to 'elements') Location the RTE should be relative to the element(s) being made editable.  See below for options.</li>
+					<ul>
+						<li>elements - each of the passed in elements will have an RTE applied above it (or below it if floating:true and element is near top of page).</li>
+						<li>pageTop - one RTE will be apllied to the top of the page, and will control all passed in elements.</li>
+						<li>pageBottom - one RTE will be apllied to the bottom of the page, and will control all passed in elements.</li>
+						<li>none - no toolbar will be applied.  Passed in elements will be made editable, and RTE shortcuts will still work. (eg. Ctrl+B will make selected text bold.)</li>
+					</ul>
+					<li>inline - Each passed in elements will have an RTE applied when it receives focus.  The RTE will be removed on blur.</li>
+					<li>buttons - (JSON, see below) buttons that should be included in the RTE.</li>
+					<li>skin - (string: defaults to 'Word03') CSS class which will be applied to the RTE.  Used to designate skins.  The following are included:</li>
+					<ul>
+						<li>Word03 - a (feeble) attempt to copy the Word 2003 interface, icons from <a href="http://freerichtexteditor.com">FreeRTE</a>.</li>
+						<li>rteGrey - an (even more feeble, we need designers!) attempt to copy the OpenWysiwyg interface, icons from OpenWebWare.</li>
+					</ul>
+				</ul>
+	
+	
+				<h3>Option: buttons</h3>
+				<ul>
+					<li>
+						Can be passed a JSON object or string of any depth, wherein each member represents an item from the <a href="#">MooRTE.Elements Object</a>.<br/>
+						In the RTE, the 'values' of each object will be placed inside the corresponding 'key'.<br/>  Note that all elements receive the keyname as a class, and ALL classnames are prepended with "rte".
+						<pre class="brush:js; html-script: true; collapse:false;">
+							buttons:{Toolbar:['bold', 'italic']}
+							
+							// becomes:
+							<div class="rteToolbar">
+								<a class="rtebold"></a>
+								<a class="rteitalic"></a>
+							</div>
+						</pre>
+					</li>
+					<li>Quote marks on single words are optional.  (Escaped quotes are unsupported.)  The following two are identical:</li>
+					<pre class="brush:js;">
+							buttons:"{'Toolbar':['bold', 'italic']}"
+							buttons:'{Toolbar:[bold, italic]}'
+					</pre>
+					<li>Curly-braces are optional, as long as the structure of the JSON is maintained. The following two are identical:</li>
+					<pre class="brush:js; ">
+							buttons:'{Toolbar:[bold, {div:strikethrough}] }'
+							buttons:'Toolbar:[bold, div:strikethrough]'
+							//See 'examples' for how this works..
+					</pre>
+					<li>Classes can be appended to each JSON member with a dot.  The element created will match the name before the dot.</li>
+						<pre class="brush:js; ">
+							buttons:'div.Menu:[bold.BtnClass, italic.BtnClass]'
+							
+							// from MooRTE.Element.div, MooRTE.Element.bold, & MooRTE.Element.italic:
+							
+							<div class="rtediv rteMenu">
+								<a class="rtebold rteBtnClass"></a>
+								<a class="rteitalic rteBtnClass"></a>
+							</div>
+						</pre>
+					
+					<li>The default button string is: 'Menu:[Main,File,Insert,save]'</li>
+				</ul>
+				
+
+				<h3>Examples</h3>
+				<p>Change the skin to the 'grey skin', inject an RTE to the top of all textareas and elements with the class 'rte'.</p>
+				<pre class="brush:js">
+					new MooRTE({skin:'rteGrey'});
+				</pre>
+				<p>Inject an RTE to the top of all divs that have the class "editable".</p>
+				<pre class="brush:js">
+					new MooRTE({elements:'div.editable'});
+				</pre>
+				<p>Float an RTE above all divs that have the class "editable".</p>
+				<pre class="brush:js">
+					new MooRTE({elements:'div.editable', floating:true});
+				</pre>
+				<p>Add a toolbar to the top of the page, which will control all divs".</p>
+				<pre class="brush:js">
+					new MooRTE({elements:'div', location:'pageTop'});
+				</pre>
+				<p>Upon focus, all divs on page will receive an RTE positioned above it.</p>
+				<pre class="brush:js">
+					new MooRTE({elements:'div', location:'inline', floating:true});
+				</pre>
+				
+				
+				<h2>MooRTE Property: activeField</h2>
+				<p>The element that was most recently brought into focus.</p>	
+				<h3>Syntax</h3>
+				<pre class="brush:js"> MooRTE.activeField </pre>
+				<h3>Returns</h3>
+				<ul><li>(element) - reference to the field that was last brought into focus. </li></ul>
+
+				<h2>MooRTE Property: activeBtn</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> MooRTE.activeBtn </pre>
+				<h3>Returns</h3>
+				<ul><li>(element) - reference to the field that was last brought into focus. </li></ul>
+				
+				<h2>MooRTE Property: activeRTE</h2>
+				<h3>Syntax</h3>
+				<pre class="brush:js"> MooRTE.activeRTE </pre>
+				<h3>Returns</h3>
+				<ul><li>(element) - reference to the field that was last brought into focus. </li></ul>
+
+				<h1>Native: Element</h1>
+				
+				<h2>Element Method: moorte</h2>
+				<p>Calls the MooRTE method on the specified element.</p>	
+				<h3>Syntax</h3>
+				<pre class="brush:js"> myElement.moorte(action, options); </pre>
+				<h3>Arguments</h3>
+				<ul>
+					<li>action (string, optional: defaults to 'create'):
+					<ul>
+						<li>'create' - add RTE to element and make it editable.  Restores the RTE if hidden or removed.  Accepts all options of class constructor. </li>
+						<li>'destroy' - completely destroy RTE associated with element and make element uneditable (or return it to textarea, etc.)</li>
+						<li>'remove' - remove associated RTE, but store a reference that can be retrieved through 'create'.  Element is made uneditable.</li>
+						<li>'hide' - set display of associated RTE to 'none', and make element uneditable.</li>
+					</ul>
+					</li>
+				</ul>
+				<h3>Options</h3>
+				<ul><li>MooRTE Class options</li></ul>
+				<h3>Returns</h2>
+				<ul><li>(object) - reference to the field that has been extended. </li></ul>	
+			</div>
+			
+			<div id="CmdMenuDetail">
+				<strong>MOORTE</strong>
+				<a>constructor</a>
+				<a>activeField</a>
+				<a>activeBtn</a>
+				<a>activeRTE</a>
+				<strong>ELEMENTS</strong>
+				<a>moorte</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- oranges,grapefruit,lemons -->
