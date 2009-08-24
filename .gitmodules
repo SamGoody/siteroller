@@ -1,3 +1,6 @@
 [submodule "siteroller/classes/domparser"]
 	path = siteroller/classes/domparser
 	url = git@github.com:siteroller/domparser.git
+[submodule "siteroller/classes/popup"]
+	path = siteroller/classes/popup
+	url = git@github.com:siteroller/popup.git
