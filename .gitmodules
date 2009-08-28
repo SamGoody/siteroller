@@ -4,3 +4,9 @@
 [submodule "siteroller/classes/popup"]
 	path = siteroller/classes/popup
 	url = git@github.com:siteroller/popup.git
+[submodule "siteroller/classes/fancyupload"]
+	path = siteroller/classes/fancyupload
+	url = http://github.com/digitarald/digitarald-fancyupload.git
+[submodule "siteroller/classes/fancyupload/repo"]
+	path = siteroller/classes/fancyupload/repo
+	url = git://github.com/digitarald/digitarald-fancyupload.git

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Mootools Rich Text Editor - MooRTE Docs</title> 
+	<title>Mootools Rich Text Editor</title> 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<meta name="author" content="SamGoody, Siteroller">
@@ -46,17 +46,18 @@
 				<a href="index-5.html">FAQs</a>    
 				<a href="index-6.html">Contact</a>
 			</div>
-			<hr/>
+			<hr >
 			<div style="margin:0 8px;">
-				<img src="images/DSC_3003 Minuteman III launch l2.png" style="width:100%"/>
+				<img src="images/DSC_3003 Minuteman III launch l2.png" style="width:100%;height:75px;"/>
 			<!--
 				<img src="images/bg_header.jpg" style="margin-left:8px"/>
 			-->
 			</div>
-			<hr class="headDivider" />
+			<hr style="text-align:left; !position:absolute;" class="headDivider"></hr>
+			
 		</div>
 		
-		<div id="body">
+		<div id="body" style="border-top:solid 1px #fff;">
 			
 			<div id="CmdMenu">
 				<h4>MooRTE Docs</h4>
@@ -203,7 +204,7 @@
 				</div>
 				<script>
 					$('eg1a').moorte({skin:'Tango',buttons:'div.Toolbar:[bold,italic,underline,strikethrough]'});
-					$$('.buttons_1').addEvent('click', function(el){ $$('.eg1').addClass('rteHide'); var l = this.get('id').substr(-2); $('eg'+l).removeClass('rteHide'); });
+					$$('.buttons_1').addEvent('click', function(el){ $$('.eg1').addClass('rteHide');  var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
 				</script>
 				
 <!-- Example #2 -->	<p><br/><br/>Not enough buttons?</p> 
@@ -324,7 +325,7 @@
 				<script>
 					//$('smallEditor').moorte({skin:'fam',buttons:'div.Toolbar:bold,italic,underline,strikethrough'});
 					$('largeEditor').moorte({buttons:'div.menu:[Main,Insert,File]'});
-					$$('.buttons_2').addEvent('click', function(el){ $$('.eg2').addClass('rteHide'); var l = this.get('id').substr(-2); $('eg'+l).removeClass('rteHide'); });
+					$$('.buttons_2').addEvent('click', function(el){ $$('.eg2').addClass('rteHide'); var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
 				</script>
 				
 <!-- Example #3 -->	<p><b>Example 3: Inline Editing (Go ahead, click!).  Grey skin, floating RTE</b></p>
@@ -449,14 +450,15 @@
 						<p> There are more options, and all of the above options can be combined to give you lots of flexibility.  Check out <a href="">the docs</a> for the whole deal!</p>
 					-->
 					
-					<script>
-						//$('smallEditor').moorte({skin:'fam',buttons:'div.Toolbar:bold,italic,underline,strikethrough'});
-						new MooRTE({elements:'#eg3a div.editable',location:'inline',floating:true,skin:'rteGrey'});
-						$$('.buttons_3').addEvent('click', function(el){ $$('.eg3').addClass('rteHide'); var l = this.get('id').substr(-2); $('eg'+l).removeClass('rteHide'); });
-					</script>
+					
 					
 				</div>
-				
+				<script>
+					//$('smallEditor').moorte({skin:'fam',buttons:'div.Toolbar:bold,italic,underline,strikethrough'});
+						// 
+					$$('.buttons_3').addEvent('click', function(el){ $$('.eg3').addClass('rteHide'); var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
+				</script>
+					
 <!-- Example #4 -->	<p><b>Example 4: Using the toolbar for more than one element</b></p>
 				<p>Webpage (iFrame) with one toolbar on the BOTTOM, that controls multiple elements. 
 				<br/>Only some of the elements have been extended.</p>
@@ -614,7 +616,7 @@
 						//$('smallEditor').moorte({skin:'fam',buttons:'div.Toolbar:bold,italic,underline,strikethrough'});
 						//var a = new MooRTE({elements:'#eg4a *.editable',location:'pageTop',skin:'Word03 adjustRTE'});
 						//$$('.adjustRTE')[0].getParent().removeClass('rtePageTop').inject($('eg4a')).setStyles({position:'absolute', bottom:0});
-						$$('.buttons_4').addEvent('click', function(el){ $$('.eg4').addClass('rteHide'); var l = this.get('id').substr(-2); $('eg'+l).removeClass('rteHide'); });
+						$$('.buttons_4').addEvent('click', function(el){ $$('.eg4').addClass('rteHide'); var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
 						window.scroll(0,0)
 					</script>
 				</div>
@@ -706,6 +708,7 @@
 		</div>
 	</div>
 </body>
+<script>new MooRTE({elements:'#eg3a div.editable', skin:'rteGrey', location:'inline', floating:true});</script>
 </html>
 
 <!-- oranges,grapefruit,lemons -->
