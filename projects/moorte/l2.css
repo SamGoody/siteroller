@@ -2,8 +2,8 @@ body{ background:#2E1302 url('images/bg.jpg') repeat-x; margin:0; padding:26px 1
 hr{  background-color:#DFD7CB; border:0; border-bottom:#fff solid 1px; margin:8px;}
 span{display:inline-block}
 #main ul li{ list-style-image:none; list-style-position:outside; list-style-type:square; line-height:1.5}
-#stage {  max-width:900px; min-width:760px; width:760px; margin:0 auto; text-align:left;  }
-#stage {  width:auto !important;	}
+#stage {  max-width:900px; min-width:760px; margin:0 auto; text-align:left; _width:770px; _xwidth:expression(document.body.clientWidth > 1000? 'auto' :'1000px'); }
+
 
 #header{ background:#F8F6F3 url('images/header_left.gif') no-repeat;}
 #TRcorner{background:url('images/header_right.gif') no-repeat right top; height:24px;}

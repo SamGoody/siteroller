@@ -15,8 +15,10 @@ function init(){
 		}
 	});
 	
-	$$('#elements input').each( function(el){
-		var selection = function(el2){
+	
+	//$$('#elements input').each( function(el){ returns an empty array in IE6
+	$$('.check-me').each( function(el){
+		var selection = function(){
 			if(el.get('checked')){			
 				var e = new Element('li', {id:'btn'+el.get('num'),styles:{'background-position':'0 '+(-20*el.get('num'))+'px' }});
 				$('collection'+ collectionCount).adopt(e);
@@ -82,7 +84,7 @@ function init(){
 	var sd =  new Fx.Tween('elements_form', {property: 'height', duration:1000});
 
 	$('clickDivider').addEvent('click', function(){	
-		ef.start(0).chain( //Notice that "this" refers to the calling object (in this case, the myFx object).
+		ef.start(0).chain( 						//Notice that "this" refers to the calling object.
 			function(){ $('efHeight').setStyle('height',0);  $('simpleDown').tween('height', 275);}
 		); 
 	})

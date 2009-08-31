@@ -24,7 +24,8 @@
 		.c1{background-image:url('rteimages/background_silver.jpg');}
 		.c2{}
 		.collection {display:inline-block;}
-		.collection li{ display:inline-block; width:20px; height:20px; cursor:move;  }
+		.collection li{ display:inline-block; width:20px; height:20px; cursor:move; }
+		.collection li{ list-style-type: none; _display:inline }
 		.c1 li,.c0 li{background-image:url('rteimages/Word03.gif'); margin:1px;}
 		.c2 li{background-image:url('rteimages/Tango.gif'); background-color:#fff; margin:2px;}
 		span{ display:inline-block; }
@@ -32,14 +33,17 @@
 		.n{display:none}
 		.a{position:absolute}
 		table{border-collapse:true;}
-		.td2, td{ width:50%; height:75px; background-color:#EEE; overflow:hidden; border:2px solid #EFEBE5;
-					-moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; -webkit-box-sizing: border-box }
+		.td2, td, .bbox{behavior: url("boxsizing.htc"); -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; -webkit-box-sizing: border-box  }
+		.td2, td{ width:50%; height:75px; background-color:#EEE; overflow:hidden; border:2px solid #EFEBE5; !width:48% }
 		.td2 b{line-height:40px;}
 		.td2 .num{ font:35px Arial; height:50px; }
 		.td2 .choice{ height:50px; width:80%; text-align:center; }
 		#elements{margin-top:50px}
 		.divider{ background-image:url('images/dividergrad.png'); height:22px; cursor:pointer }
 		#elements_form{height:0; overflow:hidden; }
+		
+	}
+
 	</style>
 </head>
 <body>
@@ -60,21 +64,21 @@
 				<a href="index-5.html">FAQs</a>    
 				<a href="index-6.html">Contact</a>
 			</div>
-			<hr/>
+			<hr>
 			<div style="margin:0 8px;">
-				<img src="images/DSC_3003 Minuteman III launch l2.png" style="width:100%"/>
+				<img src="images/DSC_3003 Minuteman III launch l2.png" style="width:100%;height:75px;"/>
 			</div>
-			<hr class="headDivider" />
+			<hr style="text-align:left; !position:absolute;" class="headDivider">	
 		</div>
 		
-		<div id="body">
+		<div id="body" style="border-top:solid 1px #fff;">
 			
 			<div id="CmdMenu">
 				<h4>MooRTE</h4>
 				<a href="MoorteDocs.htm">MooRTE</a>
-				<a href="UtilitiesDocs.htm">MooRTE.Utilities</a>
 				<a href="ElementsDocs.htm">MooRTE.Elements</a>
 				<a href="StorageDocs.htm">MooRTE Storage</a>
+				<a href="#" xhref="UtilitiesDocs.htm" title="coming soon">MooRTE.Utilities</a>
 			</div>
 			
 			<div id="main" class="main2">
@@ -169,11 +173,11 @@
 						<div id="collections" class="c0">
 							<div style="display:none">
 								<div class="MooRTE"><div class="Word03" style="width:auto; display:inline-block">
-									<div class="rteToolbar" style="width:auto;"><span class="rtestart"></span><ul style="margin:0; padding:0;" class="collection"><li style="background:transparent url(); cursor:default" class="blank"></li></ul></div>
+									<div class="rteToolbar" style="width:auto;"><span class="rtestart"></span><ul style="margin:0; padding:0;display:inline;" class="collection"><li style="background:transparent url(); cursor:default" class="blank"></li></ul></div>
 								</div></div>
 							</div>
 							<div class="MooRTE"><div class="Word03" style="width:auto; display:inline-block">
-								<div class="rteToolbar" style="width:auto"><span class="rtestart"></span><ul style="margin:0; padding:0;" class="collection" id="collection0"><li style="background-image:url(); background-color:transparent; cursor:default" class="blank"></li></ul></div>
+								<div class="rteToolbar" style="width:auto"><span class="rtestart"></span><ul style="margin:0; padding:0;display:inline;" class="collection" id="collection0"><li style="background-image:url(); background-color:transparent; cursor:default" class="blank"></li></ul></div>
 							</div></div>
 						</div>
 						<img class="a" style="bottom:0; right:32px;" id="add" src="images/kcmdrkonqi.png" title="Add a Toolbar">
