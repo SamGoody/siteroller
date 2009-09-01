@@ -249,7 +249,7 @@
 										&lt;script>
 											window.addEvent('load',function(){
 												// Custom builds only need $('editor').moorte();
-												$('editor').moorte({buttons:'div.menu:[Main,Insert,File]'});
+												$('editor').moorte({buttons:'div.Menu:[Main,Insert,File]'});
 											})
 										&lt;/script>
 									&lt;/head>
@@ -298,7 +298,7 @@
 												//Any string of elements can be passed in, including your own custom ones.  
 												//See http://siteroller.net/projects/moorte/faq.php#customButtons
 												//Groups (tabs) such as 'Main' can be built or created at runtime.
-												buttons:'div.menu:[Main,Insert,File]'
+												buttons:'div.Menu:[Main,Insert,File]'
 											});
 										})
 									&lt;/script>
@@ -324,7 +324,7 @@
 				<br/><br/>
 				<script>
 					//$('smallEditor').moorte({skin:'fam',buttons:'div.Toolbar:bold,italic,underline,strikethrough'});
-					$('largeEditor').moorte({buttons:'div.menu:[Main,Insert,File]'});
+					$('largeEditor').moorte({buttons:'div.Menu:[Main,Insert,File]'});
 					$$('.buttons_2').addEvent('click', function(el){ $$('.eg2').addClass('rteHide'); var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
 				</script>
 				

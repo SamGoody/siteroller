@@ -27,7 +27,6 @@ E_ALL;
 // e.g. /home/username/urlname
 define ('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
-
 ############################################################
 ############### CONFIGURABLE SETTINGS ######################
 ############################################################
@@ -71,7 +70,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		25=>'Select All', 26=>'Remove All Formatting', 31=>'Undo', 32=>'Redo', 
 		56=>'Horizontal Rule', 52=>'Blockquote'
 	*/
-	
+
 	$images = array(
 		'Tango'=>array('Tango.gif'),
 		'Word03'=>array('Word03.gif','bg.gif')
@@ -129,13 +128,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		elements: '".$_POST['elements']."',
 		buttons: '$buttons'
 	},";
-	$defaults = "options:{
-		floating: false,
-		location: 'elements',//[e,n,t,b,'']
-		buttons: 'Menu:[Main,File,Insert,save]',
-		skin: 'Word03',
-		elements: 'textarea, .rte'
-	},";
+	$defaults = "options:{floating: false,location: 'elements',buttons: 'Menu:[Main,File,Insert,save]',skin: 'Word03',elements: 'textarea, .rte'},";
 	//$qq = explode($defaults, $code);
 	//$errors .=  $qq[0];
 	$code = implode($options, explode($defaults, $code));	
@@ -184,13 +177,18 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 	mkdir($path = 'downloads/'.time());
 	$filename = "$path/moorte.zip";
 	$zip = new ZipArchive;
+	var_dump($zip); echo 13;	
 	$res = $zip->open($filename, ZipArchive::CREATE);
+	
 	if ($res === TRUE) {
 		//if(!$zip->addFile('../../siteroller/classes/moorte/source/moorte.css','moorte.css')) echo 'Unable to add css file';
-		foreach($images[$_POST['skin']] as $img) if(!$zip->addFile("../../siteroller/classes/moorte/source/images/$img","images/$img")) echo 'Unable to add image';
+		foreach($images[$_POST['skin']] as $img) if(!$zip->addFile("../../siteroller/classes/moorte/source/images/$img","js/mooRTE/images/$img")) echo 'Unable to add image';
 	//	if(!$zip->addFromString('errors.txt', $errors)) echo 'Something went wrong';
-		if(!$zip->addFromString('moorte.js', $code)) echo 'Something went wrong';
-		if(!$zip->addFromString('moorte.css', $style)) echo 'Something went wrong';
+		if(!$zip->addFromString('js/mooRTE/moorte.js', $code)) echo 'Something went wrong';
+		if(!$zip->addFromString('js/mooRTE/moorte.css', $style)) echo 'Something went wrong';
+		if(!$zip->addFile('../../siteroller/classes/jslibs/moo.123.js','js/mootools.123.js')) echo 'Unable to add mootools';
+		if(!$zip->addFile('../../siteroller/classes/jslibs/moore.1231.js','js/mootools.more.1231.js')) echo 'Unable to add mootools more file';
+		if(!$zip->addFile('../../siteroller/classes/moorte/samples/other/index.htm','index.html')) echo 'Unable to add mootools more file';
 		if(!$zip->close()) echo "There was a permissions error while trying to create the compressed file.";
 	} else echo 'Unable to create zip file';
 	
