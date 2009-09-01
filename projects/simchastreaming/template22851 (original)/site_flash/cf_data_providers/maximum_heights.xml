@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<maximum_heights>              				
+	<item> 1ft </item>
+	<item> 2ft </item>
+        <item> 3ft </item>
+        <item> 4ft </item>
+        <item> 5ft </item>
+        <item> 6ft </item>
+        <item> 10ft </item>
+        <item> 15ft </item>
+        <item> 20ft </item>
+        <item> 30ft </item>
+        <item> 40ft </item>
+        <item> 60ft </item>
+        <item> 100ft </item>
+        <item> over 100ft </item>
+</maximum_heights>

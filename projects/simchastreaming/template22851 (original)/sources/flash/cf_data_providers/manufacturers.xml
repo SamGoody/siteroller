@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manufacturers>              				
+	<item data="Aston Martin">
+		<item>DB7</item>
+		<item>DB9</item>
+		<item>Lagonda</item>
+		<item>V8</item>
+		<item>Vanquish</item>
+		<item>Vantage</item>
+		<item>Virage</item>
+		<item>Volante</item>
+	</item>
+
+	<item data="BMW">
+		<item>1 Series</item>
+		<item>3 Series</item>
+		<item>5 Series</item>
+		<item>6 Series</item>
+		<item>7 Series</item>
+		<item>8 Series</item>
+		<item>M1</item>
+		<item>M3</item>
+		<item>M5</item>
+		<item>M6</item>
+		<item>X3</item>
+		<item>X5</item>
+		<item>Z1</item>
+		<item>Z3</item>
+		<item>Z4</item>
+		<item>Z8</item>
+	</item>
+
+	<item data="Dacia">
+		<item>Denem</item>
+		<item>Duster</item>
+	</item>
+
+	<item data="Jeep">
+		<item>Cherokee</item>
+		<item>Commander</item>
+		<item>Grand Cherokee</item>
+		<item>Wrangler</item>
+	</item>
+
+	<item data="Saab">
+		<item>90</item>
+		<item>900</item>
+		<item>900 Talladega</item>
+		<item>9000</item>
+		<item>9-3</item>
+		<item>9-5</item>
+		<item>99</item>
+	</item>
+	
+</manufacturers>

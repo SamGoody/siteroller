@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<price_ranges>              				
+	<item>$10.000 - $15.000</item>
+	<item>$15.000 - $25.000</item>
+        <item>$25.000 - $50.000</item>
+        <item>$50.000 - $100.000</item>
+</price_ranges>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<body_types>              				
+	<item>Sedan</item>
+	<item>Wagon</item>
+        <item>Van Wagon</item>
+        <item>Cabriolet</item>
+        <item>Roadster</item>
+        <item>Targa</item>
+        <item>Coupe</item>
+        <item>Hatchback</item>
+        <item>4wd</item>
+        <item>Bus</item>
+        <item>Truck</item>
+</body_types>

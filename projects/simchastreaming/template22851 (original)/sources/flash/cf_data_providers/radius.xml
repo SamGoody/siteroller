@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<radius>              				
+	<item>from 1 to 2</item>
+	<item>from 3 to 5</item>
+        <item>from 6 to 10</item>
+        <item>from 11 to 20</item>
+</radius>

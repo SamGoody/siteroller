@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<time_zones>              				
+	<item> GMT </item>
+	<item> UT </item>
+        <item> BST </item>
+        <item> CET </item>
+        <item> EST </item>
+        <item> ET </item>
+        <item> EET </item>
+        <item> MT </item>
+        <item> MST </item>
+        <item> CT </item>
+        <item> CST </item>
+        <item> PTI </item>
+        <item> PST </item>
+        <item> HST </item>
+        <item> IST </item>
+</time_zones>

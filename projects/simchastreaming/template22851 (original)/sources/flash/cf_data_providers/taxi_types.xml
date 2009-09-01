@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<taxi_types>              				
+	<item>taxi</item>
+	<item>minibus</item>
+        <item>bus</item>
+</taxi_types>

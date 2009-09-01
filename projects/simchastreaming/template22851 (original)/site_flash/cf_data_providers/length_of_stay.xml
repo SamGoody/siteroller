@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<length_of_stay>              				
+	<item>1 day</item>
+	<item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>1 week</item>
+        <item>2 weeks</item>
+        <item>3 weeks</item>
+        <item>1 month</item>
+</length_of_stay>

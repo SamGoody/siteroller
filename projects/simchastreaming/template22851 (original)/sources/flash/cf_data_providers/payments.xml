@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<payments>              				
+	<item>Cash</item>
+	<item>Cheque</item>
+        <item>Postal order</item>
+        <item>Credit card</item>
+        <item>Swift transfer</item>
+</payments>
