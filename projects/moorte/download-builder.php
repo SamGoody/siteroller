@@ -177,7 +177,6 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 	mkdir($path = 'downloads/'.time());
 	$filename = "$path/moorte.zip";
 	$zip = new ZipArchive;
-	var_dump($zip); echo 13;	
 	$res = $zip->open($filename, ZipArchive::CREATE);
 	
 	if ($res === TRUE) {

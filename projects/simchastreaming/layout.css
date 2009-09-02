@@ -1,0 +1,32 @@
+#main {width:980px; margin:0 auto; position:relative;}
+
+#header {height:138px; background:url(images/header-bg.gif) no-repeat;}
+#header, #content, #footer { font-size:0.56em; text-transform:uppercase;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+/*======= index-1.html =======*/
+#page2 #content .col-1 {width:357px; margin-right:38px;}
+#page2 #content .col-1 .box { width:357px; height:298px; overflow:auto;}
+#page2 #content .col-1 .box .inner { width:330px; height:700px; padding:0;}
+#page2 #content .col-2 { width:357px;}
+#page2 #content .col-2 .box { width:357px; height:298px; overflow:auto;}
+#page2 #content .col-2 .box .inner { width:330px; height:700px; padding:0;}
+
+/*======= index-2.html =======*/
+#page3 #content .col-1 {width:357px; margin-right:38px;}
+#page3 #content .col-1 .box { width:357px; height:298px; overflow:auto;}
+#page3 #content .col-1 .box .inner { width:300px; height:700px; padding:0;}
+#page3 #content .col-2 { width:357px;}
+#page3 #content .col-2 .box { width:357px; height:298px; overflow:auto;}
+#page3 #content .col-2 .box .inner { width:330px; height:700px; padding:0;}
+
+/*======= index-3.html =======*/
+#page4 #content .col-1 {width:490px; margin-right:38px;}
+#page4 #content .col-2 { width:227px;}
+
+
+/*=========================*/
+
+
+#footer {height:29px;}
