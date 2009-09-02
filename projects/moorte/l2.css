@@ -2,7 +2,7 @@ body{ background:#2E1302 url('images/bg.jpg') repeat-x; margin:0; padding:26px 1
 hr{  background-color:#DFD7CB; border:0; border-bottom:#fff solid 1px; margin:8px;}
 span{display:inline-block}
 #main ul li{ list-style-image:none; list-style-position:outside; list-style-type:square; line-height:1.5}
-#stage {  max-width:900px; min-width:760px; margin:0 auto; text-align:left; _width:770px; _xwidth:expression(document.body.clientWidth > 1000? 'auto' :'1000px'); }
+#stage {  max-width:900px; min-width:760px; margin:0 auto; text-align:left; _width:790px; _xwidth:expression(document.body.clientWidth > 770 ? 'auto' :'770px'); }
 
 
 #header{ background:#F8F6F3 url('images/header_left.gif') no-repeat;}
@@ -11,7 +11,7 @@ span{display:inline-block}
 #headMenu{width:100%; text-align:right; margin-bottom:19px; height:40px; line-height:30px; position:relative; }
 #headMenu a{color:#745E50; text-decoration:none; font:0.75em Arial; display:inline-block; margin-right:29px; vertical-align:bottom; position:relative}
 #headMenu a.selected{ color:#fff;}
-#menuBG{width:57px; height:32px; position:absolute; right:312px; top:8px;}
+#menuBG{width:57px; height:32px; position:absolute; right:296px; top:8px;}
 hr.headDivider{ margin:0; margin-top:8px; width:100% }
 
 #body{background-color:#EFEBE5; min-height:200px; position:relative; display:inherit; }
