@@ -55,26 +55,26 @@
 		<div id="header">
 			<div id="TRcorner"></div>
 			<div id="headMenu">
-				<div id="logo"><strong>Siteroller:</strong> Websites made <em>really</em> easy!!</div>
-				<img src="images/MenuTab.gif" id="menuBG" />
-				<a href="index.htm">Home Page</a>       
-				<a class="selected" href="#">Projects</a>      
-				<a href="index-3.html">Library</a>     
-				<a href="index-4.html">Services</a>     
-				<a href="index-5.html">FAQs</a>    
-				<a href="index-6.html">Contact</a>
+				<div id="logo" style="font:11pt 'Comic Sans MS';">
+					<strong style="font:bold 14pt Georgia;">Siteroller:</strong> 
+					Websites made <em>really</em> easy!!
+				</div>
+				
+				<span style="width:445px; position:relative; height:30px; vertical-align:bottom; line-height:10px; padding-top:20px;">
+					<img src="images/MenuTab.gif" id="menuBG" style="right:145px; width:70px" />
+					<a href="#">Home</a><a href="#">All Projects</a><a href="index.htm" >MooRTE</a><a href="download.php"class="selected">Download</a><a href="faq.htm">FAQ</a><a href="contact.html">Contact</a>
+				</span> 
 			</div>
-			<hr>
-			<div style="margin:0 8px;">
+			<hr >
+			<div style="margin:0 8px; padding-bottom:4px;">
 				<img src="images/DSC_3003 Minuteman III launch l2.png" style="width:100%;height:75px;"/>
 			</div>
-			<hr style="text-align:left; !position:absolute;" class="headDivider">	
 		</div>
 		
-		<div id="body" style="border-top:solid 1px #fff;">
+		<div id="body" style="border-top:solid 1px #DFD7CB;">
 			
 			<div id="CmdMenu">
-				<h4>MooRTE</h4>
+				<h4>MooRTE Docs</h4>
 				<a href="MoorteDocs.htm">MooRTE</a>
 				<a href="ElementsDocs.htm">MooRTE.Elements</a>
 				<a href="StorageDocs.htm">MooRTE Storage</a>
