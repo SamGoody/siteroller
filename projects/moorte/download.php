@@ -97,6 +97,7 @@
 				<p class="divider" id="buildDivider">Modular - Build your own</p>
 				<div id="efHeight">
 				<form id="elements_form" action="thanks.php" method="post">	
+				<div id="elements_measure">
 					
 					<span class="td2">
 						<span class="num">1.</span>
@@ -213,6 +214,7 @@
 					<br/>
 					<input type="hidden" name="groups" id="groups" value="<?php //echo implode($sort_order,'|'); ?>" />
 					<div style="text-align:right; padding-right:50px;"><input type="submit" name="do_submit" value="Download" class="button" /></div>
+				</div>
 				</form>
 				</div>
 				

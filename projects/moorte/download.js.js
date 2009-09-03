@@ -71,24 +71,37 @@ function init(){
 		
 	})
 	
-	$('elements_form').set('tween', {duration:2000});
-	$$('#buildBtn, #buildDivider').addEvent('click', function(){	
-		$('efHeight').setStyle('height',784);
-		$('simpleDown').tween('height', 0);
-		
-		$('elements_form').tween('height', 800);
+	//not using mootools accordian as it does not handle well fields that can resize in the middle [fixed in Moo 2].
+	
+	var elements_form_tween_down = new Fx.Tween('elements_form', {property: 'height', duration:2000});
+	var elements_form_tween_up = new Fx.Tween('elements_form', {property: 'height'});
+	var simpleDown_tween_down    = new Fx.Tween('simpleDown',    {property: 'height'});
+	var simpleDown_tween_up    = new Fx.Tween('simpleDown',    {property: 'height', duration:2000});
+
+	$$('#buildBtn, #buildDivider').addEvent('click', function(){
+		var height = $('elements_measure').getSize().y;
+		$('efHeight').setStyle('height',height);
+		$$('#buildBtn, #buildDivider').setStyle('cursor','default');
+		$('clickDivider').setStyle('cursor','pointer');
+		simpleDown_tween_down.start(0).chain(function(){
+			elements_form_tween_down.start(height).chain(function(){
+				$('elements_form').setStyle('height', 'auto');
+				$('efHeight').setStyle('height', '');
+			})
+		})
+	});
+	
+	$('clickDivider').addEvent('click', function(){	
+		$$('#buildBtn, #buildDivider').setStyle('cursor','pointer');
+		$('clickDivider').setStyle('cursor','default');
+		var height = $('elements_measure').getSize().y;
+		$('efHeight').setStyle('height',height);
+		$('elements_form').setStyle('height', height);
+		elements_form_tween_up.start(0).chain(function(){
+			simpleDown_tween_up.start(284);$('efHeight').setStyle('height',0);  
+		})
 	})
 	
-	var ef =  new Fx.Tween('elements_form', {property: 'height', duration:1000});
-	var efH = new Fx.Tween('elements_form', {property: 'height', duration:1000});
-	var sd =  new Fx.Tween('elements_form', {property: 'height', duration:1000});
-
-	$('clickDivider').addEvent('click', function(){	
-		ef.start(0).chain( 						//Notice that "this" refers to the calling object.
-			function(){ $('efHeight').setStyle('height',0);  $('simpleDown').tween('height', 275);}
-		); 
-	})
-		
 	function clearEmpty(){
 		var them = $$('div.MooRTE');
 		them.shift();
