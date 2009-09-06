@@ -56,6 +56,7 @@ function init(){
 	$('elements_form').addEvent('submit',function(event){
 		//event.stop();
 		//console.log('abcd');
+		clearEmpty();
 		var cols = '';	//'5|';
 		$$('#collections ul').each(function(el){
 			var col = '';

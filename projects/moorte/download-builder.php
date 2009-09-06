@@ -83,6 +83,16 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 	$split = explode('MooRTE.Elements = new Hash(',$code);
 	$code= $split[0]."MooRTE.Elements = new Hash({\n";
 
+#12. Compile all requisite plugins.
+	$pluginsList = array( 
+		201 => array('simplepopup', array('popup.css','popup.js')),
+		211 => array('simplepopup', array('popup.css','popup.js')),
+		221 => array('simplepopup', array('popup.css','popup.js')),
+		 20 => array('stickypopup', array('stickywin/clientcide.moore.js')),
+		 21 => array('stickypopup', array('stickywin/clientcide.moore.js')),
+		 22 => array('stickypopup', array('stickywin/clientcide.moore.js'))
+	);
+	
 #4. The items that have been selected should be compiled into their own associative array.   (Messy.  Is there no better method for filtering one array by the values of another?) 1. $hash = array_intersect_key($buttons,array_flip($GET_['buttons'])); or
 	
 	$star = '\/\*\#\*\/';
@@ -94,9 +104,10 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		
 		foreach(explode('|',$group) as $p){
 			if($p){
-				$errors .= $p."\n";
+				//$errors .= $p."\n";
+				if($it = $pluginsList[$p]) $usedPlugins[$it[0]] = $it[1];
 				$p = $btns[] = $elements[$p];
-				$errors .= $p."\n";
+				//$errors .= $p."\n";
 				preg_match('/^'.$star.'\s*('.$p.'\s*:{.+?)'.$star.'/ms', $split[1], $matches);
 				$code.=$matches[1];
 			}
@@ -126,7 +137,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		location: '".$_POST['location']."',
 		skin: '".$_POST['skin']."',
 		elements: '".$_POST['elements']."',
-		buttons: '$buttons'
+		buttons: \"$buttons\"
 	},";
 	$defaults = "options:{floating: false,location: 'elements',buttons: 'Menu:[Main,File,Insert,save]',skin: 'Word03',elements: 'textarea, .rte'},";
 	//$qq = explode($defaults, $code);
@@ -173,7 +184,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 	$cleanup = opendir('downloads'); 
 	//Good, but lacks permissions! //while ($file = readdir($cleanup)) if($file != '.' && $file != '..' && is_numeric($file) && $file < time()) unlink("downloads/$file"); //:  - 86400
 	
-#12. Zip together with CSS:
+#13. Zip together with CSS:
 	mkdir($path = 'downloads/'.time());
 	$filename = "$path/moorte.zip";
 	$zip = new ZipArchive;
@@ -188,6 +199,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		if(!$zip->addFile('../../siteroller/classes/jslibs/moo.123.js','js/mootools.123.js')) echo 'Unable to add mootools';
 		if(!$zip->addFile('../../siteroller/classes/jslibs/moore.1231.js','js/mootools.more.1231.js')) echo 'Unable to add mootools more file';
 		if(!$zip->addFile('../../siteroller/classes/moorte/samples/other/index.htm','index.html')) echo 'Unable to add mootools more file';
+		foreach($usedPlugins as $plugin) foreach($plugin as $p) if(!$zip->addFile("../../siteroller/classes/$p","js/$p")) echo "Unable to add plugin $p";
 		if(!$zip->close()) echo "There was a permissions error while trying to create the compressed file.";
 	} else echo 'Unable to create zip file';
 	
