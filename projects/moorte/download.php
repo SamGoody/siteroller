@@ -194,7 +194,7 @@
 								6 =>'Justify Left', 7 =>'Justify Full', 8 =>'Justify Center', 9 =>'Justify Right', 18=>'Subscript', 17=>'Superscript', 
 								12=>'Indent', 11=>'Outdent', 14=>'Ordered List', 15=>'Unordered List', 20=>'Cut', 21=>'Copy', 22=>'Paste', 
 								25=>'Select All', 26=>'Remove All Formatting', 31=>'Undo', 32=>'Redo',  
-								56=>'Horizontal Rule', 52=>'Blockquote'
+								56=>'Horizontal Rule', 52=>'Blockquote', 46=>'Create Hyperlink'
 								//, 0=>'Save', 0=>'Html/Text', 0=>'popupURL', 0=>'Upload Photo', 41=>'Decrease Font Size', 42=>'Increase Font Size',
 							);
 							

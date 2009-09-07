@@ -55,7 +55,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		6 =>'justifyleft', 7 =>'justifyfull', 8 =>'justifycenter', 9 =>'justifyright', 18=>'subscript', 17=>'superscript', 
 		11=>'outdent', 12=>'indent', 14=>'insertorderedlist', 15=>'insertunorderedlist', 20=>'cut', 21=>'copy', 22=>'paste', 
 		25=>'selectall', 26=>'removeformat', 31=>'undo', 32=>'redo', 42=>'decreasefontsize', 41=>'increasefontsize', 
-		56=>'inserthorizontalrule',  52 =>'blockquote',
+		56=>'inserthorizontalrule',  52 =>'blockquote', 46 => 'hyperlink',
 		5=>'div'		
 	);
 	/*	
@@ -90,7 +90,8 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		221 => array('simplepopup', array('popup.css','popup.js')),
 		 20 => array('stickypopup', array('stickywin/clientcide.moore.js')),
 		 21 => array('stickypopup', array('stickywin/clientcide.moore.js')),
-		 22 => array('stickypopup', array('stickywin/clientcide.moore.js'))
+		 22 => array('stickypopup', array('stickywin/clientcide.moore.js')),
+		 46 => array('hyperlink',   array('stickywin/clientcide.moore.js'))
 	);
 	
 #4. The items that have been selected should be compiled into their own associative array.   (Messy.  Is there no better method for filtering one array by the values of another?) 1. $hash = array_intersect_key($buttons,array_flip($GET_['buttons'])); or
