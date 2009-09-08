@@ -96,23 +96,26 @@
 					<img src="images/code3.gif" style="position:absolute; left:-46px; top:90px; cursor:pointer;" id="button_1b" class="buttons_1"/>
 					<img src="images/commented3.gif" style="position:absolute; left:-46px; top:180px; cursor:pointer;" id="button_1c" class="buttons_1"/>
 					
-	<!-- #1a -->			<div style="position:absolute; height:275px;" id="eg1a" class="eg1"><br/>
-						<blockquote><b>
-							While Mootools is a beloved friend,<br/>
-							it is but a means unto an end,<br/>
-							This spirit has been penned to verse,<br/>
-							In Nash's style; useless but terse.<br/><br/>
-							</b>
-						</blockquote>
-						<blockquote style="font-size:14px"><b>	
-							<a href="http://www.westegg.com/nash/cow.html">The Cow:</a></br>
-							The cow is of the bovine ilk;<br/>
-							One end is <u>moo</u>, the other, milk. <br/>
-							</b>
-						</blockquote>
-						<br/>
-						&nbsp;&nbsp;I couldn't have said it better myself ;)
-						<br/><br/>
+	<!-- #1a -->	<div style="position:absolute; height:275px;" id="eg1a" class="eg1">
+						<div id="eg1aEdit">
+							<br/>
+							<blockquote><b>
+								While Mootools is a beloved friend,<br/>
+								it is but a means unto an end,<br/>
+								This spirit has been penned to verse,<br/>
+								In Nash's style; useless but terse.<br/><br/>
+								</b>
+							</blockquote>
+							<blockquote style="font-size:14px"><b>	
+								<a href="http://www.westegg.com/nash/cow.html">The Cow:</a></br>
+								The cow is of the bovine ilk;<br/>
+								One end is <u>moo</u>, the other, milk. <br/>
+								</b>
+							</blockquote>
+							<br/>
+							&nbsp;&nbsp;I couldn't have said it better myself ;)
+							<br/><br/>
+						</div>
 					</div>
 					
 	<!-- #1b -->			<div style="position:absolute; left:0; width:100%; overflow:scroll; height:275px;" id="eg1b" class="eg1 rteHide">
@@ -202,8 +205,9 @@
 					</div>		
 				</div>
 				<script>
-					$('eg1a').moorte({skin:'Tango',buttons:'div.Toolbar:[bold,italic,underline,strikethrough]'});
+					$('eg1aEdit').moorte({skin:'Tango',buttons:'div.Toolbar:[bold,italic,underline,strikethrough]'});
 					$$('.buttons_1').addEvent('click', function(el){ $$('.eg1').addClass('rteHide');  var l = this.get('id').slice(-2); $('eg'+l).removeClass('rteHide'); });
+					MooRTE.pluginpath = "../../siteroller/classes/";
 				</script>
 				
 <!-- Example #2 -->	<p><br/><br/>Not enough buttons?</p> 
@@ -217,7 +221,7 @@
 					<img src="images/code3.gif" style="position:absolute; left:-46px; top:90px; cursor:pointer;" id="button_2b" class="buttons_2"/>
 					<img src="images/commented3.gif" style="position:absolute; left:-46px; top:180px; cursor:pointer;" id="button_2c" class="buttons_2"/>
 
-	<!-- #2a -->			<div style="position:absolute; left:0;" id="eg2a" class="eg2">
+	<!-- #2a -->	<div style="xposition:absolute; left:0;" id="eg2a" class="eg2">
 						<div id="largeEditor" style="padding:20px;">
 							Dear Sirs, <br/><br/>
 							I just wanted to point out that your article on Python incorrectly states the number of extensions the language actually has.<br/>
@@ -234,7 +238,7 @@
 						</div>
 					</div>
 					
-	<!-- #2b -->			<div style="position:absolute; left:0; width:100%; overflow:scroll; height:275px;" id="eg2b" class="eg2  rteHide">					
+	<!-- #2b -->	<div style="position:absolute; left:0; width:100%; overflow:scroll; height:275px;" id="eg2b" class="eg2  rteHide">					
 						<div style="width:100%; overflow:hidden">
 							<pre id="jsCode" class="brush:js; html-script:true;">
 								&lt;!doctype>
@@ -337,7 +341,7 @@
 					<img src="images/code3.gif" style="position:absolute; left:-46px; top:90px; cursor:pointer;" id="button_3b" class="buttons_3"/>
 					<img src="images/commented3.gif" style="position:absolute; left:-46px; top:180px; cursor:pointer;" id="button_3c" class="buttons_3"/>
 				
-	<!-- #3a -->			<div style="position:absolute; left:0; height:275px; overflow:auto" id="eg3a" class="eg3">
+	<!-- #3a -->			<div style="xposition:absolute; left:0; height:275px; overflow:auto" id="eg3a" class="eg3">
 						<div class="editable">
 							Twas the Night Before Implementation, and all through the house, not a program was working, not even a browse.<br/>
 							The programmers hung by their tubes in despair, with hopes that a miracle soon would be there.<br/>
