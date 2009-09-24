@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pretty form demo</title>
+		<style type="text/css">
+			h4{width:350px; text-align:center; text-decoration:underline;}
+			
+			/* common styles */
+			i{color:red}
+			input{height:15px;}
+			.radio input{10px;}
+			div,td{border-bottom:solid 1px #C9DCA6; border-top:solid 1px #fff; padding:4px 10px; }
+			form{ width:350px; font:11px/1.8 Helvetica;  }
+			fieldset{height:254px; border-width:1px 0 0; border-color: #C9DCA6; margin:0; padding:0;color:#333; background-image:url(images/cmxform-fieldset.gif);}
+			.radio{margin-left:125px; border:0; }
+			
+			/*table only */
+			table{ border-collapse:collapse; }
+			td{width:120px}
+			.radioParent{ width:300px }
+			
+			/*inline-block only*/
+			a{padding-left:10px;}
+			span{display:-moz-inline-box; display:inline-block; width:120px}
+		</style>
+		
+	</head>
+	<body>
+	<h4> Inline-block (no tables or floats) </h4>
+		<form>
+			<p>
+				Please complete the form below. Mandatory fields marked <i>*</i>
+			</p>
+			<fieldset>
+				<legend><b>Delivery Details</b></legend>
+				<div><span>Name     <i>*</i></span><input></div>
+				<div><span>Address  <i>*</i></span><input></div>
+				<div><span>Town/City<i>*</i></span><input></div>
+				<div><span>County   <i>*</i></span><input></div>
+				<div><span>Postcode <i>*</i></span><input></div>
+				<a>Is this address also your invoice address?</a>
+				<div class="radio">
+					<input type="radio" name="invoice-address"/>Yes<br>
+					<input type="radio" name="invoice-address"/>No
+				</div>
+			</fieldset>
+			
+		</form>
+		<br>
+		<br>
+		<h4> Table based layout </h4>
+		<form>
+			<p>
+				Please complete the form below. Mandatory fields marked <i>*</i>
+			</p>
+			<fieldset>
+				<legend><b>Delivery Details</b></legend>
+				<table>
+					<tr><td>Name     <i>*</i></td><td><input></td></tr>
+					<tr><td>Address  <i>*</i></td><td><input></td></tr>
+					<tr><td>Town/City<i>*</i></td><td><input></td></tr>
+					<tr><td>County   <i>*</i></td><td><input></td></tr>
+					<tr><td>Postcode <i>*</i></td><td><input></td></tr>
+					<tr><td colspan="2" class="radioParent">
+						Is this address also your invoice address?
+						<div class="radio">
+							<input type="radio" name="invoice-address"/>Yes<br>
+							<input type="radio" name="invoice-address"/>No
+						</div>
+					</td></tr>
+				</table>	
+			</fieldset>
+			
+		</form>
+		
+		<br><br>
+		<p>
+			All styles are for generic layout purposes, with the exception of the one CSS line (line #24)<br>
+			The non-table based layout is more flexible, shorter, and more semantic.
+		</p>
+	</body>
+</html>
+      
+
