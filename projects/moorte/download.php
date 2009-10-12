@@ -118,7 +118,7 @@
 							<select class="" name="order" id="order">
 								<option value="tabbed">Tabbed</option> 
 								<option value="vertical">Vertical</option> 
-								<option value="inline">Horizontal</option>
+								<!--<option value="inline">Horizontal</option>-->
 							</select>
 						</span> 
 					</span><!--
@@ -159,8 +159,8 @@
 							<b>Compression:</b><br>
 							<select class="" name="compression">
 								<option value="none">No compression</option> 
-								<option value="yui" class="n">YUI</option> 
-								<option value="deanedwardspacker">Packer (Dean Edwards)</option> 
+							<!--	<option value="yui" class="n">YUI</option> 
+								<option value="deanedwardspacker">Packer (Dean Edwards)</option> -->
 							</select>
 						</span>
 					</span>

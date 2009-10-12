@@ -200,7 +200,7 @@ $jsMinLocation = 'compression/JSMin/jsmin-1.1.1.php';
 		if(!$zip->addFile('../../siteroller/classes/jslibs/moo.123.js','js/mootools.123.js')) echo 'Unable to add mootools';
 		if(!$zip->addFile('../../siteroller/classes/jslibs/moore.1231.js','js/mootools.more.1231.js')) echo 'Unable to add mootools more file';
 		if(!$zip->addFile('../../siteroller/classes/moorte/samples/other/index.htm','index.html')) echo 'Unable to add mootools more file';
-		foreach($usedPlugins as $plugin) foreach($plugin as $p) if(!$zip->addFile("../../siteroller/classes/$p","js/$p")) echo "Unable to add plugin $p";
+		if($usedPlugins[0]) foreach($usedPlugins as $plugin) foreach($plugin as $p) if(!$zip->addFile("../../siteroller/classes/$p","js/$p")) echo "Unable to add plugin $p";
 		if(!$zip->close()) echo "There was a permissions error while trying to create the compressed file.";
 	} else echo 'Unable to create zip file';
 	
