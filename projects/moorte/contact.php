@@ -1,4 +1,3 @@
-<?php include 'download-builder.php'; ?>
 <!doctype html>
 <html>
 
@@ -25,8 +24,8 @@
 				</div>
 				
 				<span style="width:445px; position:relative; height:30px; vertical-align:bottom; line-height:10px; padding-top:20px;">
-					<img src="images/MenuTab.gif" id="menuBG" style="right:145px; width:70px" />
-					<a href="#">Home</a><a href="#">All Projects</a><a href="index.php" >MooRTE</a><a href="download.php"class="selected">Download</a><a href="faq.htm">FAQ</a><a href="contact.php">Contact</a>
+					<img src="images/MenuTab.gif" id="menuBG" style="right:15px; width:70px" />
+					<a href="#">Home</a><a href="#">All Projects</a><a href="index.php" >MooRTE</a><a href="download.php">Download</a><a href="faq.htm">FAQ</a><a href="contact.html" class="selected">Contact</a>
 				</span> 
 			</div>
 			<hr >
@@ -45,16 +44,28 @@
 				<a href="#" xhref="UtilitiesDocs.htm" title="coming soon">MooRTE.Utilities</a>
 			</div>
 			
-			<div id="main" class="main2" style="text-align:center">
-				Thank you for downloading the MooRTE editor beta.
+			<div id="main" class="main2" style="text-align:center; height:500px;">
+				Looking for the crew behind MooRTE?
 				<br/><br/>
-				Please keep us posted.
-				<br/><br/>
-				Good luck!
+				Ready to help?  Having issues?
+				<br><br>
+				You can reach us at siteroller<span style="background-image:url(images/at.jpg); width:116px; height:15px; vertical-align:middle; margin-left:1px"></span>
+				<br><br>
+				We would love to hear from you!
+				<br><br>
+				---
+				<br><br>
+				Need a project that looks good on a resume? <br> Wanna help the universe?<br> We want <b>your</b> help! <br> 
+				<br><br>
+				Go right ahead and clone the <a href="http://github.com/siteroller/moorte">MooRTE GitHUB repository</a>
+				<br><br>
+				<br><br>
+				(If you want to send us spam, a better address would be <a href="mailto:bgates@microsoft.com">bgates@microsoft.com</a>)
+				<br><br>
+				
 			</div>
 		</div>
 	</div>
-	<iframe src="<?=$filename?>" alt="zip.php?zip=moorte.zip" style='display:none;'/>
 	<?php
 		$gu_siteid="mn2i32n";
 		$gu_param = "st=".$gu_siteid."&ref=".urlencode($_SERVER['HTTP_REFERER'])."&vip=".$_SERVER['REMOTE_ADDR']."&ua=".urlencode($_SERVER['HTTP_USER_AGENT'])."&cur=".urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])."&b=5";

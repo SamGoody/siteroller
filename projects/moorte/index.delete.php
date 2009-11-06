@@ -44,7 +44,7 @@
 				
 				<span style="width:445px; position:relative; height:30px; vertical-align:bottom; line-height:10px; padding-top:20px;">
 					<img src="images/MenuTab.gif" id="menuBG" style="right:232px;" />
-					<a href="#">Home</a><a href="#">All Projects</a><a href="index.htm" class="selected">MooRTE</a><a href="download.php">Download</a><a href="faq.htm">FAQ</a><a href="contact.php">Contact</a>
+					<a href="#">Home</a><a href="#">All Projects</a><a href="index.htm" class="selected">MooRTE</a><a href="download.php">Download</a><a href="faq.htm">FAQ</a><a href="contact.html">Contact</a>
 				</span> 
 			</div>
 			<hr >
@@ -74,13 +74,13 @@
 					<li><b>Tiny</b> - Under 16KB compressed & gzipped, under 500 lines.</li>
 					<li><b>Customisable</b> - Each instance can have its own layout and buttons.</li> 
 					<li><b>Multiple Toolbars</b> - One bar for all, or all for one...</li>
-					<li><b>Floating, fixed or inline</b> - Should the editor be in the page flow, or above it?</li>
+					<li><b>Floating, fixed or inline</b> - Should the editor be in the page-flow, or above it?</li>
 					<li><b>Skinnable</b> - comes with a few ugly themes, add your own.</li>
 					<li><b>Flexible</b> - easily extended to include any button or element you can dream of.</li>
-					<li><b>No i-frames!</b> - Smaller, cleaner, trendsetting.  Loads of benefits..</li>
+					<li><b>No i-frames!</b> - Smaller, cleaner, trendsetting.  Loads of benfeits..</li>
 					<li><b>Inline editor</b> - Natively handles true inline editing</li>
 					<li><b>Modular</b> - In true Moo fashion, get your custom build, and shed the extra 2KB</li>
-					<li><b>More</b> - But you're getting impatient.  Keep your eyes open, there's more all around...</li>
+					<li><b>More</b> - But your getting impatient.  Keep your eyes open, there's more all around...</li>
 				</ul>
 				<p>Ready?</p>
 				<p style="text-align:center"><a href="download.php" style="width:186px; height:93px; display:inline-block; background-image:url('images/cooltext424367947.png'); "></a></p>
@@ -213,8 +213,8 @@
 <!-- Example #2 -->	<p><br/><br/>Not enough buttons?</p> 
 				<p><b>Example 2: Advanced tabbed editor</b></p>
 				<p>
-					Here's the full-blown setup with all the buttons currently available to the public (a whole bunch more are bubbling up at Wonka's place as we speak):
-					<br/> Look at that tabbed interface and tell me that you're not jealous ;) &nbsp; &nbsp; [Luckily it's free..] 
+					Here's the full blown setup with all the buttons currently available to the public (a whole bunch more are bubbling up at Wonka's place as we speak):
+					<br/> Look at that tabbed interface and tell me that your not jealous ;) &nbsp; &nbsp; [Luckily its free..] 
 				</p>
 				<div style="position:relative; height:275px; ">
 					<img src="images/demo3.gif" style="position:absolute; left:-46px; top:0; cursor:pointer;" id="button_2a" class="buttons_2"/>
@@ -322,7 +322,7 @@
 				</div>
 				
 				<p>
-					All defaults are set for you through the builder, though you can override them at any time.
+					All defaults are set for you through the builder, though you can overide them at any time.
 				</p>
 				<br/><br/>
 				<script>
@@ -332,7 +332,7 @@
 				</script>
 				
 <!-- Example #3 -->	<p><b>Example 3: Inline Editing (Go ahead, click!).  Grey skin, floating RTE</b></p>
-				<p>The two elements below, when selected, will get an RTE above them.<br/>
+				<p>The two elements below, when selected, will get a RTE above them.<br/>
 					The RTE is floating and does not affect the DOM.
 				</P>
 				
@@ -347,20 +347,20 @@
 							The programmers hung by their tubes in despair, with hopes that a miracle soon would be there.<br/>
 							The users were nestled all snug in their beds, while visions of enhancements danced in their heads.<br/>
 							When out of the elevator arose such a clatter, I sprang from my desk to see what was the matter.<br/>
-							And what to my wandering eyes should appear but a super programmer (with a six-pack of beer).<br/>
-							His resume glowed with experience so rare, he turned out great code with a bitpushers flair.<br/>
+							And what to my wandering eyes should appear but a super programmer (with a six pack of beer).<br/>
+							His resume glowed with experience so rare, he turned out great code with a bit pushers flair.<br/>
 							More rapid than engines, his programs they came, and he whistled and shouted and called them by name:<br/>
 							"On Update! On Add! On Inquiry! On Delete! On Batch Job! On Closing! On Functions Complete!"
 						</div><br/>
 						<div class="editable">
 							His eyes were glazed over, fingers nimble and lean, from weekends and nights spent in front of a screen.
-							A wink of his eye and a twist of his head soon gave me to know I had nothing to dread.
+							A wink of his eye and a twist of his head soon gave me to know that I had nothing to dread.
 							He spoke not a word, but went straight to his work,	turning specs into code, then turned with a jerk,
 							and laying his finger upon the "enter" key, the system came up and worked perfectly.
 							The updates updated, the deletes they deleted, the inquires inquired and the closings completed.
-							He tested each program and tested each call, with nary a UAE, all had gone well.
+							He tested each program and tested each call, with nary an UAE, all had gone well.
 							The system was finished, the tests were concluded, the users last changes were even included.
-							And the user exclaimed with a snarl and a taunt, "It's just what I asked for, BUT IT'S NOT WHAT I WANT!" 
+							And the user exclaimed with a snarl and a taunt, "Its just what I asked for, BUT ITS NOT WHAT I WANT!" 
 						</div>
 					</div>
 					
@@ -463,7 +463,7 @@
 				</script>
 					
 <!-- Example #4 -->	<p><b>Example 4: Using the toolbar for more than one element</b></p>
-				<p>Webpage (iFrame) with one toolbar on the BOTTOM that controls multiple elements. 
+				<p>Webpage (iFrame) with one toolbar on the BOTTOM, that controls multiple elements. 
 				<br/>Only some of the elements have been extended.</p>
 				<div style="position:relative; height:500px; border:3px inset">
 					<img src="images/demo3.gif" style="position:absolute; left:-46px; top:0; cursor:pointer;" id="button_4a" class="buttons_4"/>
@@ -473,9 +473,6 @@
 					<iframe src ="iframedemo.htm" width="100%" height="500px; padding:20px;" id="eg4a" class="eg4">
 		<!-- #4a -->			<div style="position:absolute; left:0; width:100%; height:500px;padding:20px;" id="eg4a_2" class="eg4_2">
 							<div class="editable">
-								The primary purpose of the Data statement is to give names to constants; instead of referring to pi as 3.141592653589793 at every appearance, the variable Pi can be given that value with a Data statement and used instead of the longer form of the constant. This also simplifies modifying the program, should the value of pi change.
-								<blockquote> — FORTRAN manual </blockquote>
-								<!--
 								The name FORTRAN itself means: 
 								<blockquote>
 									a) FORmula TRANslation <br/>
@@ -485,7 +482,6 @@
 									e) Fortran Only Resembles Text Remotely At Night  <br/>
 									f) Nothing, it is one of those made-up marketing names like MUMPS
 								</blockquote>
-								-->
 							</div>
 							<br/>
 							
@@ -498,8 +494,8 @@
 							</p>
 							<p class="editable">
 								But this one is:<br/>
-								Q: How many programmers does it take to change a light bulb?<br/>
-								A: None, that's a hardware problem
+								Q: how many programmers does it take to change a light bulb?<br/>
+								A: none, that's a hardware problem
 							</p>
 
 							<!--
@@ -711,9 +707,9 @@
 				
 			</div>
 			
-			<?php
-				$gu_siteid="mn2i32n";
-				$gu_param = "st=".$gu_siteid."&ref=".urlencode($_SERVER['HTTP_REFERER'])."&vip=".$_SERVER['REMOTE_ADDR']."&ua=".urlencode($_SERVER['HTTP_USER_AGENT'])."&cur=".urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])."&b=5";
+			<?php  
+				$gu_siteid="bn2ahxv";
+				$gu_param = "st=".$gu_siteid."&ref=".urlencode($_SERVER['HTTP_REFERER'])."&vip=".$_SERVER['REMOTE_ADDR']."&ua=".urlencode($_SERVER['HTTP_USER_AGENT'])."&cur=".urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])."&b=2";
 				@readfile("http://counter.goingup.com/phptrack.php?".$gu_param); 
 			?>
 		</div>

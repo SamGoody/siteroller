@@ -62,7 +62,7 @@
 				
 				<span style="width:445px; position:relative; height:30px; vertical-align:bottom; line-height:10px; padding-top:20px;">
 					<img src="images/MenuTab.gif" id="menuBG" style="right:145px; width:70px" />
-					<a href="#">Home</a><a href="#">All Projects</a><a href="index.htm" >MooRTE</a><a href="download.php"class="selected">Download</a><a href="faq.htm">FAQ</a><a href="contact.html">Contact</a>
+					<a href="#">Home</a><a href="#">All Projects</a><a href="index.htm" >MooRTE</a><a href="download.php"class="selected">Download</a><a href="faq.htm">FAQ</a><a href="contact.php">Contact</a>
 				</span> 
 			</div>
 			<hr >
@@ -217,7 +217,11 @@
 				</div>
 				</form>
 				</div>
-				
+				<?php  
+					$gu_siteid="mn2i32n";
+					$gu_param = "st=".$gu_siteid."&ref=".urlencode($_SERVER['HTTP_REFERER'])."&vip=".$_SERVER['REMOTE_ADDR']."&ua=".urlencode($_SERVER['HTTP_USER_AGENT'])."&cur=".urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])."&b=5";
+					@readfile("http://counter.goingup.com/phptrack.php?".$gu_param); 
+				?>
 			</div>
 			
 		</div>
