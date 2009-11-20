@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<pet_types>              				
-	<item>None</item>
-	<item>Cat</item>
-	<item>Dog</item>
-        <item>Cat & Dog</item>
-        <item>Bird</item>
-        <item>Multiple</item>
-</pet_types>

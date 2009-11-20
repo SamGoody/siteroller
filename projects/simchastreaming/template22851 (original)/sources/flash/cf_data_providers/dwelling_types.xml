@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dwelling_types>              				
-	<item>House</item>
-	<item>Apartment</item>
-	<item>Condo</item>
-        <item>Other</item>
-</dwelling_types>
